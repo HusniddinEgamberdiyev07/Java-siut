@@ -14,8 +14,7 @@ class BankAccount {
     }
 
     void withDraw(double amount){
-        double current = balance-amount;
-        if(current > 0){
+        if(balance > amount){
             balance -= amount;
         }else{
             System.out.println("You don't have enough money!");
