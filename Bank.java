@@ -22,6 +22,7 @@ class BankAccount {
     }
 
     void displayDetails(){
+        System.out.println(" ");
         System.out.println("accountHolder: " + accountHolder);
         System.out.println("accountNumber: " + accountNumber);
         System.out.println("Balance: " + balance);
@@ -36,6 +37,7 @@ public class Bank {
         me.displayDetails();
         me.withDraw(900);
         me.deposit(1000);
+        me.displayDetails();
         me.withDraw(900);
         me.displayDetails();
     }
