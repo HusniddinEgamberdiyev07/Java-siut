@@ -83,3 +83,6 @@ class Lesson8 {
 // they will return java.lang.String. It is just string.
 
 // If string object has the same content java will create one object for all of them.
+
+// String s = new String(""); -> creates an empty object.
+// String t = null; -> Does not create an object.
