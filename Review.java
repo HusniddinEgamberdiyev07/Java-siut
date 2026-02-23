@@ -27,3 +27,14 @@ public class Review {
         return num1 + num2;
     }
 }
+
+
+
+// JRE gives us jvm, libraries
+// JDK gives us JRE, debugger, compiler
+
+// Java source code -> (compiler) -> byte code -> (jvm) -> native code
+// JVM has JIT (JUST IN TIME)
+
+// We need one compiler and defferint jvms
+
