@@ -86,3 +86,6 @@ class Lesson8 {
 
 // String s = new String(""); -> creates an empty object.
 // String t = null; -> Does not create an object.
+
+// s.length() == 0 -> empty string
+// t == null -> it is null
