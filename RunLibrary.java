@@ -3,10 +3,13 @@ class Book{
     String author;
     int pageNum;
 
-    Book(String t, String a, int pN){
-        title = t;
-        author = a;
-        pageNum = pN;
+    Book(String title, String author, int pageNum){
+        this.title = title;
+        // this.title = title
+        // this will point to the current object
+        // this is a refrence
+        this.author = author;
+        this.pageNum = pageNum;
     }
 }
 
