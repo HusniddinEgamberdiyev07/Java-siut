@@ -1,3 +1,8 @@
+// import java.util.Scanner
+// loading Scanner class into jvm
+// java and util are like folders
+// Scanner is a class
+
 class Book{
     String title;
     String author;
@@ -83,3 +88,6 @@ class RunLibrary {
         library.findTitle( "Something4");
     }
 }
+
+// Stack has author, title and pageNum of book class
+// When contructor executed stack's fields will be deleted
