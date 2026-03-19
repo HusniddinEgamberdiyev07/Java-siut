@@ -58,7 +58,7 @@ class Student{
 
 public class ClassTask {
     public static void main(String[] args) {
-        Student s1 = new Student("Husniddin", 0, new int[]{1, 2, 3, 4}, new int[]{8, 10, 3, 20}, new int[]{1, 12, 3, 34});
+        Student s1 = new Student("Husniddin", 0, new int[]{1, 2, 3, 4}, new int[]{8, 10, 3}, new int[]{1, 12, 3, 34, 30});
         s1.displayDetails();
         s1.average();
         s1.total();
