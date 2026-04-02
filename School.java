@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
-class Student {
+interface Person{
+    void setDetails();
+    void getDetails();
+}
+
+class Student implements Person{
     int id;
     String name;
     String major;
     String contact;
 
-    void setDetails() {
-        Scanner sc = new Scanner(System.in);
+    
 
+    public void setDetails() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("id");
         id = sc.nextInt();
         sc.nextLine();
@@ -19,10 +25,10 @@ class Student {
         System.out.println("Contact");
         contact = sc.nextLine();
 
-        sc.close();
+        //st.close();
     }
 
-    void getDetails() {
+    public void getDetails() {
         System.out.println("id: " + id);
         System.out.println("name: " + name);
         System.out.println("major: " + major);
@@ -30,14 +36,15 @@ class Student {
     }
 }
 
-class Teacher {
+class Teacher implements Person{
     int id;
     String name;
     String department;
 
-    void setDetails() {
-        Scanner sc = new Scanner(System.in);
+    
 
+    public void setDetails() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("id");
         id = sc.nextInt();
         sc.nextLine();
@@ -45,18 +52,16 @@ class Teacher {
         name = sc.nextLine();
         System.out.println("department");
         department = sc.nextLine();
-
-        sc.close();
     }
 
-    void getDetails() {
+    public void getDetails() {
         System.out.println("id: " + id);
         System.out.println("name: " + name);
         System.out.println("department: " + department);
     }
 }
 
-class DataInterface<T> {
+class DataInterface<T extends Person> {
 
     T obj;
 
@@ -64,16 +69,23 @@ class DataInterface<T> {
         obj = o;
     }
 
-    T RunMethods() {
-        return obj;
+    void setDetails(){
+        obj.setDetails();
+    }
+
+    void getDetails(){
+        obj.getDetails();
     }
 }
 
 public class School {
     public static void main(String[] args) {
         DataInterface<Teacher> s1 = new DataInterface<>(new Teacher());
-        s1.RunMethods().setDetails();
-        s1.RunMethods().getDetails();
-        //200 lines of code (5 roles)
+        s1.setDetails();
+        s1.getDetails();
+
+        DataInterface<Student> s2 = new DataInterface<>(new Student());
+        s2.setDetails();
+        s2.getDetails();
     }
 }
