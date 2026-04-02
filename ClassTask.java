@@ -43,9 +43,9 @@ class Student{
         return totalAmount;
     }
 
-    int calcAvg(int[] arr){
+    float calcAvg(int[] arr){
         int total = calcTotal(arr);
-        return total/arr.length;
+        return (float) total/arr.length;
     }
 
     void average(){

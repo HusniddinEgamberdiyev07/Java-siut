@@ -3,6 +3,10 @@
 // java and util are like folders
 // Scanner is a class
 
+// int n = sc.newInt();
+// [number, \n]
+// to delete \n use nextLine()
+
 class Book{
     String title;
     String author;
@@ -91,3 +95,6 @@ class RunLibrary {
 
 // Stack has author, title and pageNum of book class
 // When contructor executed stack's fields will be deleted
+
+// Stack is a temporary memory all method's fileds and variables goes there.
+// We store object fields on heap

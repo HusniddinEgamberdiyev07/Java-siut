@@ -17,7 +17,7 @@ public class Matrix {
         System.out.println("- - - -");
         for(int i = 0; i<rows_num; i++){
             for(int j = 0; j<columns_num; j++){
-                if(matrix1[i][j]>0){
+                if(matrix1[i][j]!=0){
                     int[] row = {i, j, matrix1[i][j]};
                     System.out.println("|"+row[0] + " " + row[1] + " " + row[2]+"|");
                 }

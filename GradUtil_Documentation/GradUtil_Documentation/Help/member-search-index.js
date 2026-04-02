@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.siut.utils","c":"GradeUtils","l":"calculateAverage(int[])"},{"p":"com.siut.utils","c":"GradeUtils","l":"calculateGrade(int)"},{"p":"com.siut.utils","c":"GradeUtils","l":"findMax(int[])"},{"p":"com.siut.utils","c":"GradeUtils","l":"findMin(int[])"},{"p":"com.siut.utils","c":"GradeUtils","l":"isPass(int)"}];updateSearchResults();
