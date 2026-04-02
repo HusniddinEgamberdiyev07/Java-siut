@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 interface Person{
-    void setDetails();
+    void setDetails(Scanner sc);
     void getDetails();
 }
 
@@ -13,8 +13,8 @@ class Student implements Person{
 
     
 
-    public void setDetails() {
-        Scanner sc = new Scanner(System.in);
+    public void setDetails(Scanner sc) {
+        
         System.out.println("id");
         id = sc.nextInt();
         sc.nextLine();
@@ -43,8 +43,7 @@ class Teacher implements Person{
 
     
 
-    public void setDetails() {
-        Scanner sc = new Scanner(System.in);
+    public void setDetails(Scanner sc) {
         System.out.println("id");
         id = sc.nextInt();
         sc.nextLine();
@@ -69,8 +68,8 @@ class DataInterface<T extends Person> {
         obj = o;
     }
 
-    void setDetails(){
-        obj.setDetails();
+    void setDetails(Scanner sc){
+        obj.setDetails(sc);
     }
 
     void getDetails(){
@@ -80,12 +79,16 @@ class DataInterface<T extends Person> {
 
 public class School {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         DataInterface<Teacher> s1 = new DataInterface<>(new Teacher());
-        s1.setDetails();
+        s1.setDetails(sc);
         s1.getDetails();
 
         DataInterface<Student> s2 = new DataInterface<>(new Student());
-        s2.setDetails();
+        s2.setDetails(sc);
         s2.getDetails();
+
+        sc.close();
     }
 }
