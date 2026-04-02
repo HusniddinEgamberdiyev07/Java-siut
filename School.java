@@ -11,8 +11,6 @@ class Student implements Person{
     String major;
     String contact;
 
-    
-
     public void setDetails(Scanner sc) {
         
         System.out.println("id");
@@ -24,8 +22,6 @@ class Student implements Person{
         major = sc.nextLine();
         System.out.println("Contact");
         contact = sc.nextLine();
-
-        //st.close();
     }
 
     public void getDetails() {
@@ -40,8 +36,6 @@ class Teacher implements Person{
     int id;
     String name;
     String department;
-
-    
 
     public void setDetails(Scanner sc) {
         System.out.println("id");
@@ -61,7 +55,6 @@ class Teacher implements Person{
 }
 
 class DataInterface<T extends Person> {
-
     T obj;
 
     DataInterface(T o){
