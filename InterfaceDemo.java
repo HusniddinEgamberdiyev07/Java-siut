@@ -29,5 +29,6 @@ class InterfaceDemo {
         System.out.println(m.area(5));
         // m.print();
         System.out.println(m instanceof Arithmetic);
+        System.out.println(m.sub(1, 1));
     }    
 }
