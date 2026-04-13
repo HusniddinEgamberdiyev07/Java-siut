@@ -7,6 +7,8 @@ interface Arithmetic extends OldArithmetic{
     int sum(int a, int b);
     int mult(int a, int b);
     float area(float f);
+
+    default void display(){System.out.println("Hello");}
 }
 
 class MyArith implements Arithmetic{
